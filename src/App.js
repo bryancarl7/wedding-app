@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import HeaderContainer from './components/HeaderContainer'
+//import HeaderContainer from './components/HeaderContainer'
 import MasonryImageList from './components/MasonryImageList'
 import ResponsiveAppBar from './components/ResponseAppBar';
 

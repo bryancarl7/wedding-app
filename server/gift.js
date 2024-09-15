@@ -1,20 +1,22 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router({ mergeParams: true });
 
-// Middlewear
-router.use((req, res, next) => {
+// middleware that is specific to this router
+const timeLog = (req, res, next) => {
   console.log('Time: ', Date.now());
   next();
-})
+};
+
+router.use(timeLog);
 
 router.post('/', (req, res) => {
     console.log(req);
     res.send("WE'RE Connected BAYBEE");
-})
+});
 
 
 // Define the home page route
-router.get('/home', (req, res) => {
+router.get('/masonry', (req, res) => {
     const hompageLinks = [
         {
           img: 'https://images.unsplash.com/photo-1549388604-817d15aa0110',
@@ -74,4 +76,4 @@ router.post('/submit', (req, res) => {
     res.send('recieved request' + req.params);
 })
 
-module.exports = router
+module.exports = router;

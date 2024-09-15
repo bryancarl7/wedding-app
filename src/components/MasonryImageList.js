@@ -15,7 +15,7 @@ export default class MasonryImageList extends React.Component {
   }
 
   InfoList() {
-    fetch('/api/gift/home')
+    fetch('/api/masonry')
     .then((response) => response.json())
     .then((result) => {
       console.log('Success:', result);
