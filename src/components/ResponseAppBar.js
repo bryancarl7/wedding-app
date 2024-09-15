@@ -11,22 +11,23 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { createTheme } from '@mui/material/styles';
+import { lightGreen, white, black, grey } from '@mui/material/colors';
 
 const pages = ['Wedding', 'Hotels', 'Map'];
 
 const theme = createTheme({
   palette: {
     primary: {
-      light: '#9FE2BF',
-      dark: '#1565c0',
-      contrastText: '#fff',
+      light: grey[600],
+      main: lightGreen[200],
+      dark: black[500],
       contrastText: '#fff',
     },
     secondary: {
-      light: '#1565c0',
-      dark: '#9FE2BF',
+      light: '#757ce8',
+      main: '#3f50b5',
+      dark: '#002884',
       contrastText: '#fff',
-      contrastText: '#000',
     },
   },
 });
@@ -55,8 +56,8 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static" theme={theme}>
-      <Container maxWidth="xl">
+    <AppBar position="static">
+      <Container maxWidth="xl" theme={theme}>
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
