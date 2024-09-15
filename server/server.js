@@ -1,6 +1,6 @@
 // define constants
 const express = require('express');
-const gifts = require('./gift');
+const gift = require('./gift.js');
 const mysql = require('mysql');
 const app = express();
 const port = process.env.PORT || 5000;
@@ -25,7 +25,7 @@ app.get('/api/', (req, res) => {
 });
 
 // Gifts endpoint
-app.use('/api/gift', gifts)
+app.use('/api/gift', gift)
 
 // Setup App Listening
 app.listen(port, () => console.log(`Listening on port ${port}`));

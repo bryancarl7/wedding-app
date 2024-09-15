@@ -1,5 +1,6 @@
 # Basic Node Setup
 sudo yum install npm
+npm config set legacy-peer-deps true
 npm install
 npm install pm2
 

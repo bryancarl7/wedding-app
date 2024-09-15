@@ -1,18 +1,20 @@
-# Giftorio
+# Wedding App
 
 ***Short Term Goals***
-1) Provide a good platform for the gift recommendation software
-2) Provide a platform for gamified gift giving
-3) Even getting gifts for yourself
+1) Provide a place for guests to see the save the date
+2) instructions on  where to book
+    a) where they should go through
+    b) how far apart each thing is
 
 ***Long Term Goals***
-1) Make an IOS app
-2) Good Recommendation Engine
+1) Have a home for people to get Wedding Information
 
 ## Setup ##
 Deploying a running instance
+`chmod 777 *`
 `setup.sh`
-`start.sh` (if it is not already running)
+`start.sh`
+(note: setup.sh should start a running instance)
 
 ### Requirements ###
 - Node 14.16.0 or higher
