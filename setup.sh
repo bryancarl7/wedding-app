@@ -1,5 +1,7 @@
 # Basic Node Setup
+sudo yum install npm
 npm install
+npm install pm2
 
 # Setup nginx
 sudo yum -y install nginx
