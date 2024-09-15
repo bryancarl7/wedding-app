@@ -11,21 +11,21 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { createTheme } from '@mui/material/styles';
-import { lightGreen, white, black, grey } from '@mui/material/colors';
+import { lightGreen, green, blueGrey, grey } from '@mui/material/colors';
 
 const pages = ['Wedding', 'Hotels', 'Map'];
 
 const theme = createTheme({
   palette: {
     primary: {
-      light: grey[600],
+      light: green[50],
       main: lightGreen[200],
-      dark: black[500],
+      dark: blueGrey[500],
       contrastText: '#fff',
     },
     secondary: {
       light: '#757ce8',
-      main: '#3f50b5',
+      main: grey[50],
       dark: '#002884',
       contrastText: '#fff',
     },
