@@ -1,0 +1,37 @@
+version: "3.8"
+services:
+  backend:
+    build: server/
+    command: sh start_backend.sh
+    environment:
+      DB_HOST: db
+      DB_PORT:     "${DB_PORT}"
+      DB_USER:     "${DB_USER}"
+      DB_PASSWORD: "${DB_PASS}"
+      DB_NAME:     "${DB_NAME}"
+    ports:
+      - "5001:5001"
+    depends_on: # Wait until database and frontend is loaded
+      - db
+      - frontend
+    networks:
+      - app-network
+  frontend:
+    build: . # Build image from ui Dockerfile
+    command: sh start_frontend.sh
+    ports:
+      - "3001:3001" # Expose port 3000 on host
+    networks:
+      - app-network
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASS}"
+      MYSQL_DATABASE: "${DB_NAME}"
+      MYSQL_USER:     "${DB_USER}"
+      MYSQL_PASSWORD: "${DB_PASS}"
+    networks:
+      - app-network
+networks: # Specify the network for bridging
+  app-network:
+    driver: bridge
