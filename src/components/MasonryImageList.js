@@ -43,6 +43,7 @@ export default class MasonryImageList extends React.Component {
   }
 }
 
+/*
 const itemData = [
   {
     img: 'https://images.unsplash.com/photo-1549388604-817d15aa0110',
@@ -93,3 +94,4 @@ const itemData = [
     title: 'Coffee table',
   },
 ];
+*/
